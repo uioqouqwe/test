@@ -1,8 +1,70 @@
+.buyers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .buyers-table {
-    margin: 0 auto;
     border-collapse: collapse;
+    margin-bottom: 10px;
     & th, td {
         border: 1px solid black;
         padding: 5px;
     }
+}
+
+.arrow {
+    margin-left: 10px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.up {
+    transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+}
+
+.input-name {
+    margin-left: 5px;
+}
+
+.number-of-buyers {
+    margin-bottom: 10px;
+    & span {
+        text-decoration: underline;
+        color: blue;
+        margin-right: 5px;
+    }
+    & span:hover {
+        cursor: pointer;
+    }
+    & div {
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
+
+.pagination {
+    margin-bottom: 10px;
+    & span {
+        text-decoration: underline;
+        color: blue;
+        margin-right: 5px;
+    }
+    & span:hover {
+        cursor: pointer;
+    }
+}
+
+.buyer-id {
+    text-decoration: none;
+    color: black;
 }

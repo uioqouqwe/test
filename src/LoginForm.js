@@ -46,7 +46,7 @@ function LoginForm({setAvatarUrl, setLogined}) {
   const passwordHandler = (e) => {
     const pass = e.target.value;
     setPassword(pass);
-    if (pass.search(/[A-Z]/g) !== -1 && pass.search(/[0-9]/g) !== -1) {
+    if (pass.search(/[A-Z,А-Я]/g) !== -1 && pass.search(/[0-9]/g) !== -1) {
       setPassIsValid(true);
     }
     else {
