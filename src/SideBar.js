@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './SideBar.scss';
+import {Link} from 'react-router-dom';
 
 function SideBar({avatarUrl}) {
     return (
       <div className='sidebar'>
         <img src={avatarUrl} className='img'/>
         <div>
-            <a href='#'>Терминалы</a>
-            <a href='#'>Покупатели</a>
+            <Link to='/terminals'>Терминалы</Link>
+            <Link to='/buyers'>Покупатели</Link>
         </div>
         <p>© 2020 Mizhidon Grigory</p>
       </div>

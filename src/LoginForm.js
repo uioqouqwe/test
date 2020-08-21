@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './LoginForm.scss';
 import _ from 'underscore';
 
-function LoginForm({setAvatarUrl}) {
+function LoginForm({setAvatarUrl, setLogined}) {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
   const [loginIsValid, setLoginIsValid] = useState(false);
@@ -30,6 +30,7 @@ function LoginForm({setAvatarUrl}) {
     e.preventDefault();
     getGithubAvatar(login).then(res => {
       setAvatarUrl(res.avatarUrl);
+      setLogined(true);
     });
   };
 
@@ -57,7 +58,7 @@ function LoginForm({setAvatarUrl}) {
     <form className='login-form' onSubmit={loginFormHandler}>
         <label htmlFor='login'>Login</label>
         <input type='text' id='login' value={login} onChange={loginHandler} className={loginIsValid? '' : 'invalid'}/>
-        <label htmlFor='password' value={password}>Password</label>
+        <label htmlFor='password'>Password</label>
         <input type='password' id='password' value={password} onChange={passwordHandler} className={passIsValid? '' : 'invalid'}/>
         <input type='submit' value='Войти' disabled={!loginIsValid || !passIsValid}/>
     </form>

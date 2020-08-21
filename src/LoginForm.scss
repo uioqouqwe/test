@@ -2,8 +2,11 @@
     display: flex;
     flex-direction: column;
     & * {
-    margin: 0 auto;
-    margin-bottom: 5px;
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+    & :last-child:hover {
+        cursor: pointer;
     }
 }
 .invalid {
